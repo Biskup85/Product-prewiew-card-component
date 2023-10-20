@@ -1,0 +1,151 @@
+:root {
+	box-sizing: border-box;
+}
+*,
+::before,
+::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(30, 38%, 92%);
+	font-size: 14px;
+	font-family: 'Montserrat', 'Fraunces';
+}
+body * + * {
+	margin-top: 1.5em;
+}
+
+.flex {
+	width: 300px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 1.5em;
+	border-radius: 15px;
+	background-color: white;
+}
+.hero-bg {
+	width: 300px;
+	height: 220px;
+	background-image: url('../images/image-product-mobile.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+.mainText {
+	list-style-type: none;
+	margin: 13px;
+}
+.One {
+	font-weight: 500;
+	font-family: 'Montserrat';
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: hsl(228, 12%, 48%);
+}
+.Two {
+	font-size: 25px;
+	font-family: 'Fraunces';
+	font-weight: 700;
+}
+.Three {
+	font-family: 'Montserrat';
+	line-height: 20px;
+	letter-spacing: 1px;
+	color: hsl(228, 12%, 48%);
+}
+.Four {
+	display: inline;
+}
+.priceDiscount {
+	font-family: 'Fraunces';
+	font-size: 25px;
+	font-weight: 700;
+	color: hsl(158, 36%, 37%);
+	padding-right: 16px;
+}
+.priceNormally {
+	font-family: 'Montserrat';
+	color: hsl(228, 12%, 48%);
+	text-decoration-line: line-through;
+}
+main > a {
+	width: 90%;
+	height: 40px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	background-color: hsl(158, 36%, 37%);
+	color: hsl(0, 0%, 100%);
+	text-decoration: none;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px;
+	transition: 0.4 ease;
+}
+main > a:active {
+	background-color: hsl(228, 12%, 48%);
+}
+.icon {
+	margin-right: 10px;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+@media (min-width: 768px) {
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .hero-bg{
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/image-product-desktop.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-right-radius:0;
+        border-bottom-left-radius:15px;
+    }
+  
+	.flex {
+		width: 540px;
+		height: 400px;
+		display: grid;        
+		grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+	}
+    .hero-bg{
+        grid-column: 1;
+        grid-row: 1/4;
+    }
+    .ul{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    main>a{
+        grid-column: 2;
+        grid-row: 2;
+        
+    }
+}
